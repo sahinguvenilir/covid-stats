@@ -9,3 +9,7 @@ learn more: https://vuejs.org/v2/guide/installation.html
 # Install Axios
 
 ```$ npm install axios```
+
+# COVID-19 data API
+
+https://rapidapi.com/Gramzivi/api/covid-19-data/endpoints
