@@ -1,5 +1,5 @@
 # covid-stats
-Basic files/components for fetching and displaying API response via Vue.js and Axios
+Basic components for fetching and displaying API response via Vue.js and Axios
 
 # Install Vue.js
 ```$ npm install vue```
