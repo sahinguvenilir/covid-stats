@@ -1,7 +1,11 @@
 # covid-stats
-Tutorial to fetch and display API response via Vue.js and Axios
+Basics of fetching and displaying API response via Vue.js and Axios
 
 # Install Vue.js
 ```npm install vue```
 
-More: https://vuejs.org/v2/guide/installation.html
+learn more: https://vuejs.org/v2/guide/installation.html
+
+# Install Axios
+
+```$ npm install axios```
