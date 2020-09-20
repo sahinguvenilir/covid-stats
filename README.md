@@ -2,7 +2,7 @@
 Basics of fetching and displaying API response via Vue.js and Axios
 
 # Install Vue.js
-```npm install vue```
+```$ npm install vue```
 
 learn more: https://vuejs.org/v2/guide/installation.html
 
