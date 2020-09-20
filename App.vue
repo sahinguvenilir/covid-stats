@@ -42,7 +42,7 @@ export default {
     {
 headers: {
       "x-rapidapi-host":"covid-19-data.p.rapidapi.com",
-    "x-rapidapi-key":"0002deebc5mshcc0aabe2fd665b9p188943jsnab519b09a82b",
+    "x-rapidapi-key":"YOUR API-KEY",
     "useQueryString":true
     },"params":{
     "format":"json",
