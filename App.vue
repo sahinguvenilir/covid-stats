@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="p-3 text-center">Demo</h3>
-    <search v-on:SearchRequested="handleSearch"></search>
+    <search v-on:SearchRequested="handleSearch" class="p-3 text-center"></search>
     <display :countryData=countryData></display>
 
   </div>
