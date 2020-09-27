@@ -1,9 +1,10 @@
-<template>
+<template class="p-3 text-center">
   <div class="card text-center m-3">
     <h5 class="card-header">Covid Stats (updated every 15 min)</h5>
+    <div v-if="dataCount">
     <div class="card-body" v-for="info in countryData" :key="info.key">
-   
-      <table>
+
+      <table >
         <tr>
           <th>Country</th>
           <th>Confirmed</th>
@@ -21,7 +22,6 @@
           <td>{{info.recovered}}</td>
           <td>{{info.critical}}</td>
           <td>{{info.deaths}}</td>
-          
           <td>{{new Date(info.lastUpdate) | dateFormat('DD MMMM YYYY - HH:mm A')}}</td>
           
         </tr>
@@ -29,6 +29,11 @@
           
       </table>
           </div>
+    </div>
+    <div v-else>
+      No data to show
+    </div>
+          
   </div>
 </template>
 
@@ -38,7 +43,7 @@
 
 export default {
   name: "display",
-  props: ['countryData']
+  props: ['countryData','dataCount']
   
   };
 
