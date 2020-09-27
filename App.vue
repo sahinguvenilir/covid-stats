@@ -1,8 +1,8 @@
 <template>
-  <div class="p-3 text-center">
+  <div class="p-3 text-center"> 
     <h3>Demo</h3>
     <search v-on:SearchRequested="handleSearch"></search>
-    <display :countryData=countryData></display>
+    <display :countryData=countryData :dataCount=dataCount></display>
 
   </div>
 </template>
@@ -16,8 +16,6 @@ import VueFilterDateFormat from 'vue-filter-date-format';
 
 Vue.use(VueFilterDateFormat);
 
-require('dotenv').config();
-
 export default {
   name: "app",
   components: {
@@ -29,7 +27,7 @@ export default {
     return {
       isLoading: true,
       countryData: [],
-
+      dataCount: false
     }
   },
   methods: {
@@ -42,7 +40,7 @@ export default {
     {
 headers: {
       "x-rapidapi-host":"covid-19-data.p.rapidapi.com",
-    "x-rapidapi-key":"YOUR API-KEY",
+    "x-rapidapi-key":"0002deebc5mshcc0aabe2fd665b9p188943jsnab519b09a82b",
     "useQueryString":true
     },"params":{
     "format":"json",
@@ -52,8 +50,16 @@ headers: {
 }
     })
     
-      .then(response => this.countryData = response.data)
 
+      .then((response)=>{
+      this.countryData = response.data;
+      this.dataCount = this.countryData && this.countryData.length
+
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+        
     }
     
   
